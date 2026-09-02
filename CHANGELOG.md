@@ -20,10 +20,11 @@
 - Resmî API sözleşmesine dayalı Navori Real adapter ile güvenli Mock adapter.
 - Drizzle PostgreSQL migration'ları, ilk admin CLI'si, health endpoint'leri.
 - Dockerfile, docker-compose web/worker/migrate topolojisi ve kalıcı upload volume.
-- 19 unit/integration/security testi ve Playwright ile masaüstü/mobil mock smoke doğrulaması.
+- 22 unit/integration/security testi ve Playwright ile masaüstü/mobil mock smoke doğrulaması.
 
 ### Fixed
 
 - Better Auth 1.7 account `issuer` sözleşmesi migration'a eklendi.
 - Reverse proxy/standalone ortamında canonical host kullanan same-origin doğrulaması.
 - Grup izninin alt playlist/player kapsamına güvenli aktarımı.
+- Non-root Docker image içinde migrate ve worker'ın pnpm yazma kontrolüne takılması.

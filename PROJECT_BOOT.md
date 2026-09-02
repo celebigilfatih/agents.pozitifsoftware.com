@@ -118,7 +118,7 @@
 
 ## 11. AI Handoff
 
-- **Session summary:** Onaylı stack ile production-minded MVP uygulandı; mock modda girişten worker tamamlanmasına uçtan uca gerçek tarayıcıyla doğrulandı.
+- **Session summary:** Onaylı stack ile production-minded MVP uygulandı; mock modda girişten worker tamamlanmasına uçtan uca gerçek tarayıcıyla doğrulandı. Local Docker Compose non-root runtime komutları doğrulandı.
 - **Documents updated:** README, Project Boot, changelog, deployment, admin/OpenAI runbook'ları ve CDSK execution kayıtları.
 - **Decisions recorded:** ADR-0001 ve ADR-0002 Accepted.
 - **Remaining risk:** Gerçek Navori tenant sözleşmesi ve production retention/backup/alert sahipleri açık; Real modu bu nedenle varsayılan kapalıdır.

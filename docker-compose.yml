@@ -16,7 +16,7 @@ services:
 
   migrate:
     build: .
-    command: ["pnpm", "db:migrate"]
+    command: ["node", "--import", "tsx", "src/db/migrate.ts"]
     environment: &app-env
       NODE_ENV: production
       APP_URL: ${APP_URL:-http://localhost:3000}
@@ -55,7 +55,7 @@ services:
 
   worker:
     build: .
-    command: ["pnpm", "worker"]
+    command: ["node", "--import", "tsx", "src/worker.ts"]
     restart: unless-stopped
     environment: *app-env
     volumes:

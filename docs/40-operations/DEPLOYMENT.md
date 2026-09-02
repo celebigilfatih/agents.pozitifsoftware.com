@@ -21,9 +21,9 @@
 
 Aynı Dockerfile/image ile üç ayrı resource/command kullanılır:
 
-- **migrate (release command):** `pnpm db:migrate`; her immutable release öncesi bir kez.
+- **migrate (release command):** `node --import tsx src/db/migrate.ts`; her immutable release öncesi bir kez.
 - **web:** image varsayılan komutu `node server.js`; internal port `3000`.
-- **worker:** `pnpm worker`; public port açılmaz.
+- **worker:** `node --import tsx src/worker.ts`; public port açılmaz.
 
 Web ve worker'a aynı `DATABASE_URL`, `AUTH_SECRET`, OpenAI/Navori secret'ları ve aynı kalıcı `/app/data/uploads` volume'u verilir. Migration resource'u volume istemez. En az iki web replica ancak session DB ve shared upload volume erişimi doğrulandıktan sonra açılır.
 
