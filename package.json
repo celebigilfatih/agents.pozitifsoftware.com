@@ -1,0 +1,61 @@
+{
+  "name": "pozitif-ai-navori-publisher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "worker": "tsx src/worker.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:security": "vitest run tests/security",
+    "test:e2e": "playwright test",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.4",
+    "better-auth": "1.7.2",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^0.542.0",
+    "next": "16.3.4",
+    "openai": "7.8.0",
+    "pg": "^8.16.3",
+    "pg-boss": "12.29.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tsx": "^4.20.6",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.10.0",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitest/coverage-v8": "4.1.11",
+    "drizzle-kit": "^0.31.6",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.3.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "4.1.11"
+  }
+}

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+node_modules/
+.pnpm-store/
+.playwright-cli/
+.next/
+coverage/
+playwright-report/
+test-results/
+data/
+dist/
+build/
+.DS_Store

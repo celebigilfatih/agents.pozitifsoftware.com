@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #152620;
+  --muted: #62716b;
+  --paper: #f5f7f3;
+  --surface: #ffffff;
+  --line: #dce5df;
+  --brand: #0c7058;
+  --brand-dark: #075441;
+  --brand-soft: #e4f3ed;
+  --accent: #dc693e;
+  --warning: #a45b09;
+  --danger: #b63c3c;
+  --shadow: 0 16px 45px rgba(21, 38, 32, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background: var(--paper);
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 8% -10%,
+      rgba(12, 112, 88, 0.09),
+      transparent 25rem
+    ),
+    var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 3px solid rgba(12, 112, 88, 0.35);
+  outline-offset: 2px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 18px rgba(21, 38, 32, 0.04);
+}
+.eyebrow {
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 12px;
+  padding: 0.68rem 1rem;
+  font-weight: 750;
+  transition: 160ms ease;
+  cursor: pointer;
+}
+.btn-primary {
+  border: 1px solid var(--brand);
+  color: white;
+  background: var(--brand);
+}
+.btn-primary:hover {
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: white;
+}
+.btn-secondary:hover {
+  border-color: #9eb5aa;
+  background: #f9fbf9;
+}
+.btn-danger {
+  border: 1px solid #f0cece;
+  color: var(--danger);
+  background: #fff7f7;
+}
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+.field {
+  width: 100%;
+  border: 1px solid #ccd9d2;
+  border-radius: 12px;
+  color: var(--ink);
+  background: white;
+  padding: 0.78rem 0.9rem;
+}
+.field::placeholder {
+  color: #8a9992;
+}
+.field:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(12, 112, 88, 0.1);
+  outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
