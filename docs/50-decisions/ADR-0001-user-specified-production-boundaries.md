@@ -45,5 +45,6 @@ Real mod sorununda `NAVORI_API_ENABLED=false` ile yayın kapatılır; audit koru
 
 ## Open Questions
 
-- DT Cloud Navori sürümü, API Addon lisansı ve tenant endpoint contract'ı: TBD.
+- API Addon kullanıcı beyanıyla aktiftir; DT Cloud Navori sürümü, credential ve
+  canlı tenant endpoint contract doğrulaması: TBD.
 - Production backup/retention sahipleri: TBD.

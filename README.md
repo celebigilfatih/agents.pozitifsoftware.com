@@ -64,6 +64,9 @@ NAVORI_ALLOWED_HOSTS=tenant.example.com
 ```
 
 Real adapter yalnızca HTTPS ve allowlist host kabul eder; destructive endpoint sunmaz.
+Navori SaaS için doğrulanmış taban adresi
+`https://saas.navori.com/NavoriService/Api/`, allowlist host'u ise
+`saas.navori.com` değeridir.
 
 ## Kalite komutları
 

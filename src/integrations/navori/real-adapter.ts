@@ -418,7 +418,7 @@ export class RealNavoriAdapter implements NavoriAdapter {
   }): Promise<PublicationResult> {
     await this.call(apiMethods.publish, {
       PlayerIdList: input.playerIds.map(Number),
-      Option: input.scheduledAt ? "DATE" : "ASAP",
+      Option: input.scheduledAt ? "Defered" : "ASAP",
       Methode: "RestartPlaylist",
       ...(input.scheduledAt ? { Date: input.scheduledAt } : {}),
     });

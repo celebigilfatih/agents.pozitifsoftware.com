@@ -21,6 +21,8 @@
 Varsayılan test akışında dış servis yoktur: Mock Navori ve deterministic OpenAI
 fixture kullanılır. Test DB ayrı `TEST_DATABASE_URL` ister ve her suite izole
 transaction/schema kullanır. Gerçek Navori/OpenAI çağrısı otomatik testte yasaktır.
+Real Navori contract testleri HTTP'yi process içinde stub'lar; SaaS endpoint,
+token header, publish seçenekleri ve append-only playlist payload'ını doğrular.
 
 ## Release Gates
 

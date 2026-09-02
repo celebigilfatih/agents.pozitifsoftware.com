@@ -11,5 +11,12 @@
 
 - Navori resmi dokümanı REST/JSON API ve API Addon gereksinimini doğrular:
   <https://na.navori.com/navoriservice/apidocumentation/>
+- Navori SaaS sözleşmesi `GetToken`, token header'ı, `UploadFile`,
+  `SetPlaylists` ve `PublishContent` payload'larını doğrular:
+  <https://saas.navori.com/NavoriService/APIDocumentation/>
 - OpenAI resmi Responses API referansı strict structured output kullanımını
   doğrular: <https://developers.openai.com/api/reference/resources/responses/methods/create>
+
+SaaS `PublishContent` sözleşmesinde anlık seçenek `ASAP`, zamanlanmış seçenek
+Navori'nin kendi yazımıyla `Defered` değeridir. `PublishedStatus` alanı mevcut
+olsa da olası değerleri belgelenmediği için gerçek tenant çıktısıyla doğrulanır.

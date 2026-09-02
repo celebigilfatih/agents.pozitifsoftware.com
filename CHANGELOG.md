@@ -20,7 +20,8 @@
 - Resmî API sözleşmesine dayalı Navori Real adapter ile güvenli Mock adapter.
 - Drizzle PostgreSQL migration'ları, ilk admin CLI'si, health endpoint'leri.
 - Dockerfile, docker-compose web/worker/migrate topolojisi ve kalıcı upload volume.
-- 22 unit/integration/security testi ve Playwright ile masaüstü/mobil mock smoke doğrulaması.
+- 26 unit/integration/security testi ve Playwright ile masaüstü/mobil mock smoke doğrulaması.
+- Navori SaaS için stub HTTP tabanlı endpoint, token, publish ve playlist contract testleri.
 
 ### Fixed
 
@@ -28,3 +29,4 @@
 - Reverse proxy/standalone ortamında canonical host kullanan same-origin doğrulaması.
 - Grup izninin alt playlist/player kapsamına güvenli aktarımı.
 - Non-root Docker image içinde migrate ve worker'ın pnpm yazma kontrolüne takılması.
+- Zamanlanmış Navori yayın seçeneğinin resmî `Defered` sözleşmesiyle uyuşmaması.

@@ -31,7 +31,7 @@
 - **Version:** 0.1.0
 - **Active sprint / milestone:** M2 — Production rollout
 - **Current focus:** Coolify secret/volume kurulumu ve gerçek Navori tenant contract doğrulaması.
-- **Critical risks:** Navori API Addon/tenant contract; production retention/backup değerleri.
+- **Critical risks:** Navori canlı tenant contract'ı; production retention/backup değerleri.
 - **Blocking decisions:** Yok; ADR-0002 onaylandı. Navori real contract readiness ayrı üretim kapısıdır.
 - **Last status update:** 2026-09-02
 
@@ -72,7 +72,7 @@
 
 - **Purpose:** Güvenli Navori yayın orkestrasyonu MVP'sini geliştirmek.
 - **Constraints and prohibitions:** Model doğrudan yayınlayamaz; gerçek yayın insan onayı ister; secret/video sınırları korunur.
-- **Open questions:** Tenant API contract, production retention/backup/alert sahipleri.
+- **Open questions:** Kullanıcı beyanıyla aktif API Addon'ın canlı credential doğrulaması, tenant `PublishedStatus` değerleri ile upload wire contract'ı; production retention/backup/alert sahipleri.
 - **Recent decisions:** ADR-0002 onaylandı; Next.js/PostgreSQL/Better Auth/pg-boss temeli uygulandı.
 - **Recently completed:** Responsive web UI, RBAC, upload, strict intent, confirmation, queue/worker, Mock/Real Navori adapter, audit, migration ve Docker paketi.
 
@@ -118,11 +118,11 @@
 
 ## 11. AI Handoff
 
-- **Session summary:** Onaylı stack ile production-minded MVP uygulandı; mock modda girişten worker tamamlanmasına uçtan uca gerçek tarayıcıyla doğrulandı. Local Docker Compose non-root runtime komutları doğrulandı.
+- **Session summary:** Onaylı stack ile production-minded MVP uygulandı; mock E2E ve local Docker doğrulandı. Navori SaaS endpoint/token/publish/playlist sözleşmeleri stub HTTP contract testleriyle güvenceye alındı.
 - **Documents updated:** README, Project Boot, changelog, deployment, admin/OpenAI runbook'ları ve CDSK execution kayıtları.
 - **Decisions recorded:** ADR-0001 ve ADR-0002 Accepted.
-- **Remaining risk:** Gerçek Navori tenant sözleşmesi ve production retention/backup/alert sahipleri açık; Real modu bu nedenle varsayılan kapalıdır.
-- **Recommended next step:** Repository'yi Coolify'a bağla, secret/volume'ları tanımla ve önce Mock smoke deployment yap.
+- **Remaining risk:** Gerçek tenant `UploadFile.Buffer` wire davranışı ve `PublishedStatus` değerleri ile production retention/backup/alert sahipleri açık; Real modu bu nedenle varsayılan kapalıdır.
+- **Recommended next step:** Navori secret'larını yerelde tanımla; önce salt-okunur `GetToken`/`GetGroups`/`GetPlayers` contract smoke testi yap.
 
 > Kısa tut. Tam sohbet özeti yazma; bir sonraki oturumun güvenle devam etmesi
 > için gerekli kalıcı bağlamı yaz.
@@ -134,3 +134,4 @@
 | 0.1     | 2026-09-01 | CDSK proje şablonu oluşturuldu                              |
 | 0.2     | 2026-09-01 | Ürün bağlamı, mimari sınırlar ve ADR onay kapısı kaydedildi |
 | 0.3     | 2026-09-02 | MVP, kalite kapıları ve uçtan uca mock doğrulama tamamlandı |
+| 0.4     | 2026-09-02 | Navori SaaS contract düzeltmesi ve stub testleri eklendi    |
